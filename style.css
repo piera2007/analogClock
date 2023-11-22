@@ -97,11 +97,11 @@ body {
 .marking:nth-child(4):after {
   content: 'IV';
   position: absolute;
-  top: 70%;
-  left: 85%;
-  transform: translate(-50%, -50%) rotate(112.5deg);
+  top: 350%;
+  left: 5000%;
+  transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
-  display: none;
+  
 }
 
 .marking:nth-child(5):after {
@@ -164,15 +164,6 @@ body {
   top: 190%;
   left: 5700%;
   transform: translate(-50%, -50%) rotate(88deg);
-  color: #ffffff;
-}
-
-.marking:nth-child(13):after {
-  content: 'IV';
-  position: absolute;
-  top: 600%;
-  left: 2700%;
-  transform: translate(-50%, -50%) rotate(180deg);
   color: #ffffff;
 }
 
