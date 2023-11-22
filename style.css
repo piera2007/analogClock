@@ -41,14 +41,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('bilda.png') no-repeat center center;
+  
   background-size: cover;
 }
 
 /* Styles for clock hands */
 .hand {
   position: absolute;
-  background: #000;
+  background: #837777;
   transform-origin: 50% 100%; /* Set the rotation point to the bottom center */
   left: 50%;
   bottom: 50%;
@@ -56,7 +56,7 @@ body {
 .hour-hand {
   width: 4.5px;
   height: 50px;
-  z-index: 3;
+  z-index: 1;
 }
 .min-hand {
   width: 3.5px;
@@ -66,7 +66,7 @@ body {
 .second-hand {
   width: 2px;
   height: 80px;
-  z-index: 1;
+  z-index: 3;
   background-color: #FF0000;
 }
 /* Adjusted positioning for markings */
@@ -77,40 +77,131 @@ body {
   left: 50%;
   transform-origin: 50% 100%;
 }
-.marking:nth-child(1) {
-  transform: rotate(30deg);
+
+.marking:nth-child(12):after {
+  content: 'XII';
+  position: absolute;
+  top: 100%;
+  left: 6500%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
 }
-.marking:nth-child(2) {
-  transform: rotate(60deg);
+.marking:nth-child(1):after {
+  content: 'I';
+  position: absolute;
+  top: 15%;
+  left: 73%;
+  transform: translate(-50%, -50%) rotate(22.5deg);
+  color: #ffffff;
 }
-.marking:nth-child(3) {
-  transform: rotate(90deg);
+.marking:nth-child(2):after {
+  content: 'II';
+  position: absolute;
+  top: 28%;
+  left: 84%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  color: #ffffff;
 }
-.marking:nth-child(4) {
-  transform: rotate(120deg);
+.marking:nth-child(3):after {
+  content: 'III';
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
 }
-.marking:nth-child(5) {
-  transform: rotate(150deg);
-}
-.marking:nth-child(6) {
-  transform: rotate(180deg);
-}
-.marking:nth-child(7) {
-  transform: rotate(210deg);
-}
-.marking:nth-child(8) {
-  transform: rotate(240deg);
-}
-.marking:nth-child(9) {
-  transform: rotate(270deg);
-}
-.marking:nth-child(10) {
-  transform: rotate(300deg);
-}
-.marking:nth-child(11) {
-  transform: rotate(330deg);
-}
-.marking:nth-child(12) {
-  transform: rotate(0deg);
+.marking:nth-child(4):after {
+  content: 'IV';
+  position: absolute;
+  top: 70%;
+  left: 85%;
+  transform: translate(-50%, -50%) rotate(112.5deg);
+  color: #ffffff;
 }
 
+.marking:nth-child(5):after {
+  content: 'V';
+  position: absolute;
+  top: 200%;
+  left: 5000%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
+}
+
+.marking:nth-child(6):after {
+  content: 'VI';
+  position: absolute;
+  top: 110%;
+  left: 4500%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
+}
+.marking:nth-child(7):after {
+  content: 'VII';
+  position: absolute;
+  top: 82%;
+  left: 4000%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
+}
+.marking:nth-child(8):after {
+  content: 'VIII';
+  position: absolute;
+  top: 200%;
+  left: 3700%;
+  transform: translate(-50%, -50%) rotate(92.5deg);
+  color: #ffffff;
+}
+.marking:nth-child(9):after {
+  content: 'IX';
+  position: absolute;
+  top: 300%;
+  left: 4000%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
+}
+.marking:nth-child(10):after {
+  content: 'X';
+  position: absolute;
+  top: 300%;
+  left: 4700%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #ffffff;
+}
+.marking:nth-child(11):after {
+  content: 'XI';
+  position: absolute;
+  top: 190%;
+  left: 5700%;
+  transform: translate(-50%, -50%) rotate(88deg);
+  color: #ffffff;
+}
+
+.center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000000; /* Farbe des Punktes */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4; /* Über den Zeigern, um sicherzustellen, dass sie den Punkt nicht verdecken */
+}
+
+img {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: margin 0.5s ease, transform 0.5s ease;
+
+  /* Fügt einen Rahmen hinzu */
+  border: 2px solid #000000;
+
+  /* Fügt einen Hover-Effekt hinzu */
+  transition: box-shadow 0.3s ease;
+}
+
+img:hover {
+  box-shadow: 0 8px 16px rgba(74, 73, 73, 0.2);
+}
