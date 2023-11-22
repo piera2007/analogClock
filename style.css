@@ -1,27 +1,31 @@
-/* New styles for clock hands */
+/* Styles for clock hands */
 .hand {
   position: absolute;
-  background: #000000;
-  transform-origin: center;
+  background: #6c6363;
+  transform-origin: 50% 100%; /* Set the rotation point to the bottom center */
+  left: 50%;
+  bottom: 50%;
 }
+
 .hour-hand {
-  width: 6px;
+  width: 4.5px;
   height: 50px;
-  z-index: 3;
-  background-color: #000;
+  z-index: 1;
 }
+
 .min-hand {
-  width: 4px;
+  width: 3.5px;
   height: 70px;
   z-index: 2;
-  background-color: #000;
 }
+
 .second-hand {
   width: 2px;
   height: 80px;
-  z-index: 1;
-  background-color: #FF0000;
+  z-index: 3;
+  background-color: #000000;
 }
+
 /* Center the clock */
 body {
   display: flex;
@@ -29,8 +33,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(to bottom, #380c8a, rgb(192, 155, 219)) no-repeat fixed;
+  background: linear-gradient(to bottom, #380c8a, rgb(192, 155, 219)) no-repeat fixed; /* Makes a gradient for the background */
 }
+
 .clock {
   /* Additional styling for the clock container */
   width: 200px; /* Set the desired width */
@@ -41,34 +46,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   background-size: cover;
 }
 
-/* Styles for clock hands */
-.hand {
-  position: absolute;
-  background: #837777;
-  transform-origin: 50% 100%; /* Set the rotation point to the bottom center */
-  left: 50%;
-  bottom: 50%;
-}
-.hour-hand {
-  width: 4.5px;
-  height: 50px;
-  z-index: 1;
-}
-.min-hand {
-  width: 3.5px;
-  height: 70px;
-  z-index: 2;
-}
-.second-hand {
-  width: 2px;
-  height: 80px;
-  z-index: 3;
-  background-color: #FF0000;
-}
 /* Adjusted positioning for markings */
 .marking {
   width: 2px;
@@ -86,6 +66,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(1):after {
   content: 'I';
   position: absolute;
@@ -94,6 +75,7 @@ body {
   transform: translate(-50%, -50%) rotate(22.5deg);
   color: #ffffff;
 }
+
 .marking:nth-child(2):after {
   content: 'II';
   position: absolute;
@@ -102,6 +84,7 @@ body {
   transform: translate(-50%, -50%) rotate(45deg);
   color: #ffffff;
 }
+
 .marking:nth-child(3):after {
   content: 'III';
   position: absolute;
@@ -110,6 +93,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(4):after {
   content: 'IV';
   position: absolute;
@@ -117,6 +101,7 @@ body {
   left: 85%;
   transform: translate(-50%, -50%) rotate(112.5deg);
   color: #ffffff;
+  display: none;
 }
 
 .marking:nth-child(5):after {
@@ -136,6 +121,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(7):after {
   content: 'VII';
   position: absolute;
@@ -144,6 +130,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(8):after {
   content: 'VIII';
   position: absolute;
@@ -152,6 +139,7 @@ body {
   transform: translate(-50%, -50%) rotate(92.5deg);
   color: #ffffff;
 }
+
 .marking:nth-child(9):after {
   content: 'IX';
   position: absolute;
@@ -160,6 +148,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(10):after {
   content: 'X';
   position: absolute;
@@ -168,6 +157,7 @@ body {
   transform: translate(-50%, -50%) rotate(90deg);
   color: #ffffff;
 }
+
 .marking:nth-child(11):after {
   content: 'XI';
   position: absolute;
@@ -177,31 +167,52 @@ body {
   color: #ffffff;
 }
 
+.marking:nth-child(13):after {
+  content: 'IV';
+  position: absolute;
+  top: 600%;
+  left: 2700%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  color: #ffffff;
+}
+
 .center-dot {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #000000; /* Farbe des Punktes */
+  background-color: #000000; /* Color of the point */
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4; /* Über den Zeigern, um sicherzustellen, dass sie den Punkt nicht verdecken */
+  z-index: 4; /* Above the pointers to make sure they don't obscure the point*/
 }
 
+/* Image styles */
 img {
   margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: margin 0.5s ease, transform 0.5s ease;
 
-  /* Fügt einen Rahmen hinzu */
+  /* Adds a frame */
   border: 2px solid #000000;
 
-  /* Fügt einen Hover-Effekt hinzu */
+  /* Adds a hover effect */
   transition: box-shadow 0.3s ease;
 }
 
 img:hover {
   box-shadow: 0 8px 16px rgba(74, 73, 73, 0.2);
+}
+
+/* Media queries */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .clock {
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .clock {
+  }
 }
