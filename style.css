@@ -1,21 +1,116 @@
+/* New styles for clock hands */
+.hand {
+  position: absolute;
+  background: #000000;
+  transform-origin: center;
+}
+.hour-hand {
+  width: 6px;
+  height: 50px;
+  z-index: 3;
+  background-color: #000;
+}
+.min-hand {
+  width: 4px;
+  height: 70px;
+  z-index: 2;
+  background-color: #000;
+}
+.second-hand {
+  width: 2px;
+  height: 80px;
+  z-index: 1;
+  background-color: #FF0000;
+}
+/* Center the clock */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: linear-gradient(to bottom, #380c8a, rgb(192, 155, 219)) no-repeat fixed;
-    color: #ffffff;
-    transition: background 0.5s ease;
-  }
-  
-  
-  
-  p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(39, 38, 38, 0.5); /* Schatten für */
-  }
-  
-  
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #380c8a, rgb(192, 155, 219)) no-repeat fixed;
+}
+.clock {
+  /* Additional styling for the clock container */
+  width: 200px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  border: 2px solid #000;
+  border-radius: 750%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('bilda.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* Styles for clock hands */
+.hand {
+  position: absolute;
+  background: #000;
+  transform-origin: 50% 100%; /* Set the rotation point to the bottom center */
+  left: 50%;
+  bottom: 50%;
+}
+.hour-hand {
+  width: 4.5px;
+  height: 50px;
+  z-index: 3;
+}
+.min-hand {
+  width: 3.5px;
+  height: 70px;
+  z-index: 2;
+}
+.second-hand {
+  width: 2px;
+  height: 80px;
+  z-index: 1;
+  background-color: #FF0000;
+}
+/* Adjusted positioning for markings */
+.marking {
+  width: 2px;
+  height: 10px;
+  top: 5%;
+  left: 50%;
+  transform-origin: 50% 100%;
+}
+.marking:nth-child(1) {
+  transform: rotate(30deg);
+}
+.marking:nth-child(2) {
+  transform: rotate(60deg);
+}
+.marking:nth-child(3) {
+  transform: rotate(90deg);
+}
+.marking:nth-child(4) {
+  transform: rotate(120deg);
+}
+.marking:nth-child(5) {
+  transform: rotate(150deg);
+}
+.marking:nth-child(6) {
+  transform: rotate(180deg);
+}
+.marking:nth-child(7) {
+  transform: rotate(210deg);
+}
+.marking:nth-child(8) {
+  transform: rotate(240deg);
+}
+.marking:nth-child(9) {
+  transform: rotate(270deg);
+}
+.marking:nth-child(10) {
+  transform: rotate(300deg);
+}
+.marking:nth-child(11) {
+  transform: rotate(330deg);
+}
+.marking:nth-child(12) {
+  transform: rotate(0deg);
+}
+
